@@ -2,17 +2,18 @@
 using Core.Utilities.IoC;
 using Microsoft.AspNetCore.Http;
 using System;
-using Castle.DynamicProxy;
 using System.Collections.Generic;
-using System.Linq;
+using System.Text;
+using Castle.DynamicProxy;
 using Microsoft.Extensions.DependencyInjection;
 using Core.Extensions;
 using Business.Constans;
 
-namespace Business.BusinessAspect.Autofac
+namespace Business.BusinessAspects.Autofac
 {
+    //JWT
     public class SecuredOperation : MethodInterception
-    {   
+    {
         private string[] _roles;
         private IHttpContextAccessor _httpContextAccessor;
 
